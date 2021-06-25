@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>音乐搜索播放站 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Document                 音乐搜索：                  搜索         注意：搜索不出来或者点击无法播放就是没有资源">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&lt;!DOCTYPE html&gt;&lt;html lang&#x3D;&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset&#x3D;&amp;quot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="音乐搜索播放站">
 <meta property="og:url" content="http://example.com/2021/06/22/%E9%9F%B3%E4%B9%90%E6%90%9C%E7%B4%A2%E6%92%AD%E6%94%BE%E7%AB%99/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Document                 音乐搜索：                  搜索         注意：搜索不出来或者点击无法播放就是没有资源">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&lt;!DOCTYPE html&gt;&lt;html lang&#x3D;&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset&#x3D;&amp;quot">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-22T07:34:07.000Z">
-<meta property="article:modified_time" content="2021-06-22T07:36:41.261Z">
+<meta property="article:modified_time" content="2021-06-22T07:45:18.279Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="音乐">
 <meta property="article:tag" content="瞎鼓捣">
@@ -162,62 +162,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head> 
-<body>
-    <div id="app">
-        <span>音乐搜索：</span>
-        <input type="text" @keyup.enter="searchSong" v-model="user_input">
-        <button @click="searchSong">搜索</button>
-        <span>注意：搜索不出来或者点击无法播放就是没有资源</span>
-        <br>
-        <audio ref="audio" v-bind:src="song_url" controls autoplay loop ></audio>
-        <hr>
-        <div id="songList" >
-            <div v-for="item in search_result" @click="getSongUrl(item.id)">
-                
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-        var app = new Vue({
-            el: "#app",
-            data: {
-                user_input: "",
-                song_url: "",
-                search_result: []
-            },
-            methods: {
-                searchSong: function () {
-                    api = "https://autumnfish.cn/search?keywords="
-                    var that = this;
-                    // console.log("查询歌曲");
-                    axios.get(api + this.user_input).then(function (response) {
-                        console.log(response);
-                        that.search_result = response.data.result.songs;
-                    }, function (err) { })
-                },
-                getSongUrl: function (id) {
-                    var api = "https://autumnfish.cn/song/url?id=";
-                    var that = this;
-                    axios.get(api + id).then(function (response) {
-                        console.log(response);
-                        that.song_url = response.data.data[0].url;
-                    }, function (err) { })
-                }
-            }
-        })
-    </script>
-</body>
-</html>
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>音乐搜索：<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.enter</span>=<span class="string">&quot;searchSong&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;user_input&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;searchSong&quot;</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>注意：搜索不出来或者点击无法播放就是没有资源<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">audio</span> <span class="attr">ref</span>=<span class="string">&quot;audio&quot;</span> <span class="attr">v-bind:src</span>=<span class="string">&quot;song_url&quot;</span> <span class="attr">controls</span> <span class="attr">autoplay</span> <span class="attr">loop</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;songList&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;item in search_result&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;getSongUrl(item.id)&quot;</span>&gt;</span></span><br><span class="line">                &#123;&#123; item.name &#125;&#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/axios/dist/axios.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">user_input</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="attr">song_url</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="attr">search_result</span>: []</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">searchSong</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    api = <span class="string">&quot;https://autumnfish.cn/search?keywords=&quot;</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">var</span> that = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// console.log(&quot;查询歌曲&quot;);</span></span></span><br><span class="line"><span class="javascript">                    axios.get(api + <span class="built_in">this</span>.user_input).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">console</span>.log(response);</span></span><br><span class="line"><span class="javascript">                        that.search_result = response.data.result.songs;</span></span><br><span class="line"><span class="javascript">                    &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123; &#125;)</span></span><br><span class="line"><span class="javascript">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="attr">getSongUrl</span>: <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">var</span> api = <span class="string">&quot;https://autumnfish.cn/song/url?id=&quot;</span>;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">var</span> that = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript">                    axios.get(api + id).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">console</span>.log(response);</span></span><br><span class="line"><span class="javascript">                        that.song_url = response.data.data[<span class="number">0</span>].url;</span></span><br><span class="line"><span class="javascript">                    &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123; &#125;)</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -513,6 +460,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">瞎鼓捣</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
             
             <div class="clearfix"></div>
