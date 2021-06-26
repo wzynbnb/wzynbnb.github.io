@@ -248,7 +248,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p><img src="C:\Users\王子越\AppData\Roaming\Typora\typora-user-images\image-20210625214316637.png" alt="image-20210625214316637"></p>
+        <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625214323.png" alt="image-20210625214316637"></p>
 <h3 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h3><p>一个标签可以有多个类名，每个类名用空格隔开</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;class1 class2 classN&quot;</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -264,8 +264,65 @@
 
 
 
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="颜色："><a href="#颜色：" class="headerlink" title="颜色："></a>颜色：</h5><p>color</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h5><p>font-family</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&#x27;宋体&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果使用多个字体，用逗号隔开，使用多个字体的意义是，如果客户端没有第一种字体的时候，顺延使用第二种，以此类推</p>
+<p>字体名称中间包含空格符的，要用引号引起来</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&#x27;宋体&#x27;</span>,<span class="string">&#x27;Microsoft Yahei&#x27;</span>,Arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>谷歌默认的字体就是微软雅黑</p>
+<h5 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h5><p>color</p>
 <h5 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h5><p>font-size</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">23px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要指定单位，px为像素</p>
+<h5 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h5><p>font-weight</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">	<span class="attribute">font-weight</span>: bold;</span><br><span class="line">	<span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">	<span class="attribute">font-weight</span>: lighter;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>normal</strong></p>
+<p>正常粗细。与<code>400等值。</code></p>
+<p><strong>bold</strong></p>
+<p> 加粗。 与<code>700等值。</code></p>
+<p><strong>lighter</strong></p>
+<p>比从父元素继承来的值更细(处在字体可行的粗细值范围内)。</p>
+<p><strong>bolder</strong></p>
+<p>比从父元素继承来的值更粗 (处在字体可行的粗细值范围内)。</p>
+<p><strong>number</strong></p>
+<p>一个介于 1 和 1000 (包含) 之间的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/number">``</a> 类型值。更大的数值代表字体重量粗于更小的数值 (或一样粗)。一些常用的数值对应于通用的字体重量名称，如章节<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight#%E5%B8%B8%E8%A7%81%E7%B2%97%E7%BB%86%E5%80%BC%E5%90%8D%E7%A7%B0%E5%92%8C%E6%95%B0%E5%80%BC%E5%AF%B9%E5%BA%94">常见粗细值名称和数值对应</a>所描述。</p>
+<p><strong>实际开发中用数字表示粗细程度更常见</strong></p>
+<h5 id="字体倾斜控制"><a href="#字体倾斜控制" class="headerlink" title="字体倾斜控制"></a>字体倾斜控制</h5><p>font-style</p>
+<p>使字体倾斜：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">font-style</span>: italic;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>使字体<strong>不倾斜</strong>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">em</span> &#123;</span><br><span class="line">	<span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在开发过程中很少给字体设置倾斜效果，反而将em标签自带的倾斜效果去掉的操作更常见</p>
+<h5 id="上、中、下划线"><a href="#上、中、下划线" class="headerlink" title="上、中、下划线"></a>上、中、下划线</h5><p>text-decoration</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">	<span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625221334.png" alt="image-20210625221333970"></p>
+<p>对 a 标签使用 text-decoration: none; 属性，可以删除 a 标签自带的下划线</p>
+<h4 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h4><h5 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h5><p>text-indent</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">text-indent</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有第二个单位 em ，em 是一个相对单位，当前段落使用的字体大小是多少，1em 单位就是多大</p>
+<p>首行缩进两字符可以这样写：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h5><p>text-height</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	text-<span class="attribute">height</span>: <span class="number">26px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625221921.png" alt="image-20210625221921158"></p>
+<h4 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h4><h5 id="text-align"><a href="#text-align" class="headerlink" title="text-align"></a>text-align</h5><p>用于设置元素内文本内容的水平对齐方式，<strong>注意是控制盒子里面的内容的位置，而不是控制盒子的位置</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625221038.png" alt="image-20210625221038779"></p>
 <h4 id="块"><a href="#块" class="headerlink" title="块"></a>块</h4><h5 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h5><p>background-color</p>
 
       
