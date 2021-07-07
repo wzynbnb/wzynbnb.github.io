@@ -365,6 +365,56 @@
 
 
 
+<h2 id="CSS的三大特性"><a href="#CSS的三大特性" class="headerlink" title="CSS的三大特性"></a>CSS的三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210706175533.png" alt="image-20210706175525948"></p>
+<h4 id="important"><a href="#important" class="headerlink" title="!important"></a>!important</h4><p>!important 可以改变选择器的优先级</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">100px</span> important;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.font</span> &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210706180027.gif" alt="1"></p>
+<h2 id="标签的分类及特点"><a href="#标签的分类及特点" class="headerlink" title="标签的分类及特点"></a>标签的分类及特点</h2><h3 id="块级、行内元素"><a href="#块级、行内元素" class="headerlink" title="块级、行内元素"></a>块级、行内元素</h3><p>块元素独占一行，行内元素可以在一行内并排</p>
+<h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3><p>常见块元素有：</p>
+<ol>
+<li>h1~h6</li>
+<li>p</li>
+<li>div（最典型的）</li>
+<li>ul、ol、li</li>
+</ol>
+<p>特点：</p>
+<ol>
+<li>独占一行</li>
+<li>高度宽度内外边距均可调节</li>
+<li>宽度默认是容器（父级宽度的100%）</li>
+<li>是一个容器，里面可以继续放行内或者块级元素</li>
+</ol>
+<p><strong>文字类的标签，如h1~h6、p等，里面不允许放块级元素</strong></p>
+<h3 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h3><p>最典型的就是 span 标签</p>
+<p>特点：</p>
+<ol>
+<li>相邻的行内元素会在一行上显示</li>
+<li><strong>高、宽直接设置是无效的</strong></li>
+<li>默认的宽度就是它本身内容的宽度</li>
+<li>行内元素内部只能放文本，或其他行内元素，不能放块级元素</li>
+</ol>
+<p>注：</p>
+<p><strong>a 标签在特殊情况下可以在内部放块级元素，不过最好还是给 a 标签转一下块级模式最好</strong></p>
+<h3 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h3><p>有一些元素既有行内元素的特点，又有块元素的特点，如 img input td 等等</p>
+<p>特点：</p>
+<ol>
+<li>和相邻行内元素\行内块元素相邻时，会在一行上显示，但是之间会有缝隙<strong>（行内元素特点）</strong></li>
+<li>默认宽度是其本身内容的宽度<strong>（行内元素特点）</strong></li>
+<li>宽高、内外边距都可以控制<strong>（块元素特点）</strong></li>
+</ol>
+<h3 id="模式转换"><a href="#模式转换" class="headerlink" title="模式转换"></a>模式转换</h3><p>可以人为的把行内元素转换为块级元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>把块级元素转换为行内元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>转换为<strong>行内块元素</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -373,7 +423,18 @@
 
 
 
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625214323.png" alt="image-20210625214316637"></p>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h3><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625214323.png" alt="image-20210625214316637"></p>
 <h3 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h3><p>一个标签可以有多个类名，每个类名用空格隔开</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;class1 class2 classN&quot;</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -383,13 +444,57 @@
 
 
 
+<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>如果要选择 ul 下的 li，不选 ol 下的 li，则：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><p>只选择父标签的亲儿子标签</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &gt; <span class="selector-tag">a</span> &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一种会选择 div 标签下所有的 a 标签，而第二种只会选择与 div 标签为 父子关系的 a 标签</p>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>同时选中多个类、id的标签</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,<span class="selector-tag">a</span>,<span class="selector-class">.class1</span>,<span class="selector-id">#id1</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: pink;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样写也是可以的</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,</span><br><span class="line"><span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.class1</span>&gt;<span class="selector-tag">a</span>,</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.class2</span> <span class="selector-tag">a</span> <span class="selector-tag">img</span>,</span><br><span class="line"><span class="selector-id">#id1</span>,</span><br><span class="line"><span class="selector-id">#id2</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>用于给某些选择器添加特殊效果，<strong>使用使要按照LVHA，即 :link :visited :hover :active 的顺序来写</strong></p>
+<p>用冒号写伪类选择器</p>
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210629211309.png" alt="image-20210629211309839"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123;</span><br><span class="line">	<span class="comment">&lt;!-- 在此修改未被访问链接的样式 --&gt;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:visited &#123;</span><br><span class="line">	<span class="comment">&lt;!-- 在此修改已被访问链接的样式 --&gt;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">	<span class="comment">&lt;!-- 在此修改鼠标正在悬停的链接的样式 --&gt;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:active &#123;</span><br><span class="line">	<span class="comment">&lt;!-- 在此修改按下去还没抬起来的链接的样式 --&gt;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 
 
 
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h5><p>font-family</p>
+
+
+
+<h4 id="focus伪类选择器"><a href="#focus伪类选择器" class="headerlink" title=":focus伪类选择器"></a>:focus伪类选择器</h4><p>用于选取<strong>获得焦点的表单元素</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210629213000.gif" alt="1"></p>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><h4 id="边框粗细"><a href="#边框粗细" class="headerlink" title="边框粗细"></a>边框粗细</h4><p>border-with</p>
+<h4 id="边框样式"><a href="#边框样式" class="headerlink" title="边框样式"></a>边框样式</h4><p>border-style</p>
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210706181611.png" alt="image-20210706181611678"></p>
+<h4 id="边框颜色"><a href="#边框颜色" class="headerlink" title="边框颜色"></a>边框颜色</h4><p>border-color</p>
+<h4 id="合并相邻盒子的边框"><a href="#合并相邻盒子的边框" class="headerlink" title="合并相邻盒子的边框"></a>合并相邻盒子的边框</h4><p>border-collapse</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid blue; </span><br><span class="line">    <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样设置之后，相邻的两个盒子的边框就会叠在一起，比较美观</p>
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210706182817.png" alt="image-20210706182816966"></p>
+<h4 id="内外边距"><a href="#内外边距" class="headerlink" title="内外边距"></a>内外边距</h4><h5 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h5><p>如果盒子本身没有指定 width/height 属性，则此时 padding 不会撑开盒子。</p>
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210707173918.gif" alt="1"></p>
+<p>如图中，本来 div 继承 html 标签宽度，未主动设置宽度，此时设置 padding 不会撑开盒子，但是如果设置了 width 为100%，则此时设置的 padding 则会撑大盒子</p>
+<h5 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h5><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h5><p>font-family</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&#x27;宋体&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果使用多个字体，用逗号隔开，使用多个字体的意义是，如果客户端没有第一种字体的时候，顺延使用第二种，以此类推</p>
@@ -448,7 +553,53 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210625221038.png" alt="image-20210625221038779"></p>
-<h4 id="块"><a href="#块" class="headerlink" title="块"></a>块</h4><h5 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h5><p>background-color</p>
+<h5 id="文字垂直居中"><a href="#文字垂直居中" class="headerlink" title="文字垂直居中"></a>文字垂直居中</h5><p>小技巧：设置文字的行高等于盒子的高度，就实现了文字的垂直居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h4 id="块"><a href="#块" class="headerlink" title="块"></a>块</h4><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><h5 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h5><p>background-color</p>
+<p>默认情况下，背景颜色属性值为 transparent 透明的</p>
+<h5 id="背景图像"><a href="#背景图像" class="headerlink" title="背景图像"></a>背景图像</h5><p>background-image</p>
+<p>实际开发过程中，更常用给块元素设置背景图片的方式来插入图片，而不是用 img 标签，因为前者更好控制图片的位置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: none|<span class="built_in">url</span>(<span class="string">url</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">background-image</span>: none;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">images/logo.png</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="背景图片平铺"><a href="#背景图片平铺" class="headerlink" title="背景图片平铺"></a>背景图片平铺</h5><p>background-repeat</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: repeat| no-repeat| repeat-x| repeat-y</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="背景图片位置"><a href="#背景图片位置" class="headerlink" title="背景图片位置"></a>背景图片位置</h5><p>background-position</p>
+<p>利用该属性可以改变图片在背景中的位置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: x y;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使得图片位置在盒子的x轴中间，y轴顶部 */</span></span><br><span class="line"><span class="attribute">background-position</span>: center top;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使得图片位置在盒子的x轴右边，y轴中间 */</span></span><br><span class="line"><span class="attribute">background-position</span>: right center;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>使用方位名词控制图片位置时，方位名词不分前后顺序，如background-position: center top;只有一种意思，就是x轴居中，y轴顶部，<strong>因为只有y轴可以有顶部底部之分，故top肯定是修饰y轴的，故center肯定是修饰x轴的</strong>，background-position: center top;与background-position: top center;是等价的</p>
+<p>注：</p>
+<p>如果只写一个方位名词，则另一个方向的位置会默认设置为居中</p>
+<p>也可以直接设置 left、top 的距离</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="背景图像固定"><a href="#背景图像固定" class="headerlink" title="背景图像固定"></a>背景图像固定</h5><p>background-attachment</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-attachment</span>: scoll | fixed</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210701174114.png" alt="image-20210701174114238"></p>
+<h5 id="背景透明度"><a href="#背景透明度" class="headerlink" title="背景透明度"></a>背景透明度</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">rbga</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>最后一个值是 alpha 透明度，取值范围在0~1之间</p>
 
       
 
