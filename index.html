@@ -494,7 +494,26 @@
 <h4 id="内外边距"><a href="#内外边距" class="headerlink" title="内外边距"></a>内外边距</h4><h5 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h5><p>如果盒子本身没有指定 width/height 属性，则此时 padding 不会撑开盒子。</p>
 <p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210707173918.gif" alt="1"></p>
 <p>如图中，本来 div 继承 html 标签宽度，未主动设置宽度，此时设置 padding 不会撑开盒子，但是如果设置了 width 为100%，则此时设置的 padding 则会撑大盒子</p>
-<h5 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h5><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h5><p>font-family</p>
+<h5 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h5><p>外边距可以让块级盒子水平居中，只要设置：</p>
+<ol>
+<li>盒子必须指定了宽度</li>
+<li>盒子<strong>左右外边距</strong>都设置为 auto</li>
+</ol>
+<p><strong>这个是实际开发中非常非常常用的技巧</strong></p>
+<h6 id="相邻块元素垂直外边距的自动合并问题"><a href="#相邻块元素垂直外边距的自动合并问题" class="headerlink" title="相邻块元素垂直外边距的自动合并问题"></a>相邻块元素垂直外边距的自动合并问题</h6><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210707195348.png" alt="image-20210707195348067"></p>
+<p>解决办法：</p>
+<p>尽量只给相邻盒子其中的一个添加 margin 值</p>
+<h6 id="嵌套块级元素垂直外边距的塌陷问题"><a href="#嵌套块级元素垂直外边距的塌陷问题" class="headerlink" title="嵌套块级元素垂直外边距的塌陷问题"></a>嵌套块级元素垂直外边距的塌陷问题</h6><p><img src="https://raw.githubusercontent.com/wzynbnb/pic/main/img/20210707200537.gif" alt="1"></p>
+<p>解决办法：</p>
+<ol>
+<li><p>为父元素定义上边框</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid transparent;</span><br></pre></td></tr></table></figure></li>
+<li><p>为父元素定义上内边距</p>
+</li>
+<li><p>为父元素添加 overflow:hidden 属性</p>
+</li>
+</ol>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><h5 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h5><p>font-family</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&#x27;宋体&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果使用多个字体，用逗号隔开，使用多个字体的意义是，如果客户端没有第一种字体的时候，顺延使用第二种，以此类推</p>
@@ -560,10 +579,14 @@
 
 
 
+<h5 id="块元素水平居中显示"><a href="#块元素水平居中显示" class="headerlink" title="块元素水平居中显示"></a>块元素水平居中显示</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>: xxpx;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br></pre></td></tr></table></figure>
 
-
-
-
+<p>外边距可以让块级盒子水平居中，只要设置：</p>
+<ol>
+<li>盒子必须指定了宽度</li>
+<li>盒子<strong>左右外边距</strong>都设置为 auto</li>
+</ol>
+<p><strong>这个是实际开发中非常非常常用的技巧</strong></p>
 <h4 id="块"><a href="#块" class="headerlink" title="块"></a>块</h4><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><h5 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h5><p>background-color</p>
 <p>默认情况下，背景颜色属性值为 transparent 透明的</p>
 <h5 id="背景图像"><a href="#背景图像" class="headerlink" title="背景图像"></a>背景图像</h5><p>background-image</p>
